@@ -1,0 +1,63 @@
+---
+// Témoignages Google + badge de note.
+const reviews = [
+  {
+    initials: 'CL',
+    text: '« Après des mois d’insomnie, j’ai retrouvé un vrai sommeil dès les premières séances. Archibald est à l’écoute, doux et profondément rassurant. »',
+    name: 'Claire L.',
+    date: 'Marseille · il y a 3 semaines',
+  },
+  {
+    initials: 'MT',
+    text: '« Des douleurs de dos chroniques que rien ne soulageait. Le travail sur les fascias a tout changé. Un accompagnement humain et précis, je recommande vivement. »',
+    name: 'Marc T.',
+    date: '13006 · il y a 1 mois',
+  },
+  {
+    initials: 'SF',
+    text: '« Un vrai moment pour soi. Je suis arrivée tendue par le stress, je suis repartie apaisée. Le cabinet est calme et facile d’accès. Merci. »',
+    name: 'Sophie F.',
+    date: 'Marseille · il y a 2 mois',
+  },
+]
+---
+
+<section class="sec" id="avis">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow center">Ce qu'ils·elles en disent</span>
+      <h2>Des centaines de personnes m'ont fait confiance.</h2>
+    </div>
+    <div class="reviews-top reveal">
+      <div class="google-badge">
+        <span class="g-score">5,0</span>
+        <div class="g-meta">
+          <div class="g-stars" aria-hidden="true">★★★★★</div>
+          <div class="g-count">69 avis vérifiés</div>
+        </div>
+        <div class="g-logo" style="border-left:1px solid var(--line);padding-left:16px;">
+          <svg width="20" height="20" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.5 12.2c0-.7-.1-1.4-.2-2H12v3.9h5.9a5 5 0 0 1-2.2 3.3v2.7h3.6c2.1-2 3.2-4.9 3.2-7.9z"/><path fill="#34A853" d="M12 23c2.9 0 5.4-1 7.2-2.6l-3.6-2.7c-1 .7-2.3 1.1-3.6 1.1-2.8 0-5.2-1.9-6-4.4H2.3v2.8A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M6 14.3a6.6 6.6 0 0 1 0-4.2V7.3H2.3a11 11 0 0 0 0 9.8z"/><path fill="#EA4335" d="M12 5.5c1.6 0 3 .5 4.1 1.6l3.1-3.1A11 11 0 0 0 2.3 7.3L6 10.1c.9-2.6 3.3-4.6 6-4.6z"/></svg>
+          Google
+        </div>
+      </div>
+    </div>
+    <div class="reviews-grid">
+      {
+        reviews.map((r) => (
+          <div class="review reveal">
+            <div class="r-stars" aria-hidden="true">★★★★★</div>
+            <p>{r.text}</p>
+            <div class="r-author">
+              <span class="r-av">{r.initials}</span>
+              <div>
+                <div class="r-name">{r.name}</div>
+                <div class="r-date">{r.date}</div>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+    <p class="reveal" style="text-align:center;margin-top:22px;font-size:14px;color:var(--ink-faint);">Extraits représentatifs · note moyenne 5/5 sur 69 avis Google</p>
+  </div>
+</section>

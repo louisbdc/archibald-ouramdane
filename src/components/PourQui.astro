@@ -1,0 +1,68 @@
+---
+// Grille des situations adressées par l'accompagnement.
+const conditions = [
+  {
+    icon: '<path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 12 5 5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7z"/>',
+    title: 'Douleurs chroniques',
+    text: 'Bas du dos, nuque, migraines, névralgies… Relâcher en profondeur les tensions installées.',
+  },
+  {
+    icon: '<path d="M3 12a9 9 0 1 1 18 0"/><path d="M12 12v6"/><path d="M9 18h6"/>',
+    title: 'Stress & anxiété',
+    text: 'Un espace où le corps peut enfin s’autoriser à relâcher, pour retrouver un calme intérieur.',
+  },
+  {
+    icon: '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>',
+    title: 'Insomnies & sommeil',
+    text: 'Apaiser le système nerveux pour retrouver un sommeil qui répare vraiment.',
+  },
+  {
+    icon: '<path d="M22 12h-4l-3 9L9 3l-3 9H2"/>',
+    title: 'Burn-out & épuisement',
+    text: 'Une respiration dans l’épuisement : récupérer, recharger, redescendre.',
+  },
+  {
+    icon: '<path d="M12 2a3 3 0 0 0-3 3c0 1 .5 2 1 3-1 0-2 .5-2 2 0 1 1 2 2 2-1 1-2 2-2 4a3 3 0 0 0 6 0c0-2-1-3-2-4 1 0 2-1 2-2 0-1.5-1-2-2-2 .5-1 1-2 1-3a3 3 0 0 0-3-3z"/>',
+    title: 'Soin de support',
+    text: 'Un accompagnement sensible lors de pathologies lourdes ou de traitements liés au cancer.',
+  },
+  {
+    icon: '<circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/>',
+    title: 'Errance médicale',
+    text: 'Quand les examens sont « normaux » mais que rien ne va, le fascia garde la mémoire.',
+  },
+  {
+    icon: '<path d="M8 2v4M16 2v4"/><rect x="3" y="6" width="18" height="16" rx="2"/><path d="M9 14h6M12 11v6"/>',
+    title: 'Post-opératoire',
+    text: 'Soutenir la récupération, la mobilité tissulaire et la cicatrisation, en complément du suivi.',
+  },
+  {
+    icon: '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>',
+    title: 'Post-traumatique',
+    text: 'Libérer les tensions profondes laissées par un choc physique ou émotionnel.',
+  },
+]
+---
+
+<section class="sec" id="pour-qui" style="background:var(--cream);">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow center">Pour qui</span>
+      <h2>À qui s'adresse cet accompagnement ?</h2>
+      <p>Si vous vous reconnaissez dans l'une de ces situations, un soulagement durable est possible, même avec le sentiment d'avoir déjà tout essayé.</p>
+    </div>
+    <div class="cond-grid">
+      {
+        conditions.map((c) => (
+          <div class="cond reveal">
+            <div class="cond-ico">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" set:html={c.icon} />
+            </div>
+            <h4>{c.title}</h4>
+            <p>{c.text}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

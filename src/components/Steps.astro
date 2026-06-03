@@ -1,0 +1,76 @@
+---
+// Galerie immersive — le déroulé d'une séance en 3 temps.
+const infoIcon =
+  '<circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/>'
+const clockIcon = '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>'
+
+const steps = [
+  {
+    reversed: false,
+    img: 'https://archibald-ouramdane.fr/wp-content/uploads/2025/12/archibald-ouramdane-therapeute-manuel-des-fascias-marseille-consultation-premier-echange-scaled.jpg',
+    alt: "Premier échange entre Archibald Ouramdane et un patient, assis face à face dans le cabinet de Marseille pour comprendre l'histoire corporelle de la personne",
+    caption: 'Étape 1 · Le premier échange, en confiance',
+    num: '01',
+    title: 'Un temps d’échange pour comprendre votre histoire corporelle',
+    text: 'Un moment d’écoute attentive pour comprendre votre situation, vos besoins et votre vécu. Ensemble, nous posons les premières bases d’un accompagnement bienveillant, adapté à votre histoire et respectueux de votre rythme.',
+    dur: '≈ 15 min d’échange',
+  },
+  {
+    reversed: true,
+    img: 'https://archibald-ouramdane.fr/wp-content/uploads/2025/12/archibald-ouramdane-therapeute-m-scaled.jpg',
+    alt: 'Soin manuel des fascias sur table : les mains du thérapeute travaillent en douceur les tissus pour relâcher les zones de tension du corps',
+    caption: 'Étape 2 · Le soin manuel sur table',
+    num: '02',
+    title: 'Un soin sur table, au rythme de votre corps',
+    text: 'Un soin manuel doux et personnalisé : j’identifie vos zones de tension, j’évalue leurs restrictions et j’accompagne leur relâchement de manière ciblée. Chaque geste est adapté à votre morphologie et à votre ressenti du moment.',
+    dur: '≈ 50 min de soin',
+  },
+  {
+    reversed: false,
+    img: 'https://archibald-ouramdane.fr/wp-content/uploads/2025/12/archibald-ouramdane-therapeute-manuel-des-fascias-consultation-suivi-scaled.jpg',
+    alt: 'Moment de suivi après le soin : Archibald Ouramdane échange avec son patient pour faire le point et planifier l’accompagnement sur plusieurs séances',
+    caption: 'Étape 3 · Le suivi personnalisé',
+    num: '03',
+    title: 'Un suivi personnalisé, pour des résultats durables',
+    text: 'Avec un accompagnement progressif sur plusieurs séances, vous vous sentez soulagé·e, libéré·e et renforcé·e, tout en réduisant le risque de récidive. Vous retrouvez un bien-être global, à la fois physique et émotionnel.',
+    dur: '≈ 10 min de bilan',
+  },
+]
+---
+
+<section class="sec steps" id="seance">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow center">Le déroulé d'une séance</span>
+      <h2>Trois temps, un même fil :<br />vous écouter, vous accompagner.</h2>
+      <p>Chaque séance dure environ 75 minutes. Voici comment elle se déroule, étape par étape.</p>
+    </div>
+
+    {
+      steps.map((s) => (
+        <div class={`step${s.reversed ? ' rev' : ''} reveal`}>
+          <div class="step-media">
+            <img src={s.img} alt={s.alt} />
+            <div class="step-cap">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" set:html={infoIcon} />
+              {s.caption}
+            </div>
+          </div>
+          <div class="step-body">
+            <div class="step-num">{s.num}</div>
+            <h3>{s.title}</h3>
+            <p>{s.text}</p>
+            <span class="step-dur">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" set:html={clockIcon} />
+              {s.dur}
+            </span>
+          </div>
+        </div>
+      ))
+    }
+
+    <div class="reveal" style="text-align:center;margin-top:50px;">
+      <button class="btn btn-primary btn-lg" data-scroll-book>Réserver ma première séance</button>
+    </div>
+  </div>
+</section>

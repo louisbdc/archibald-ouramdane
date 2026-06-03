@@ -1,0 +1,39 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Header from '../components/Header.astro'
+import Hero from '../components/Hero.astro'
+import TrustStrip from '../components/TrustStrip.astro'
+import Empathy from '../components/Empathy.astro'
+import FasciaExplainer from '../components/FasciaExplainer.astro'
+import PourQui from '../components/PourQui.astro'
+import Steps from '../components/Steps.astro'
+import About from '../components/About.astro'
+import Reviews from '../components/Reviews.astro'
+import CtaFinal from '../components/CtaFinal.astro'
+import Contact from '../components/Contact.astro'
+import Footer from '../components/Footer.astro'
+import StickyBar from '../components/StickyBar.astro'
+---
+
+<Layout
+  title="Archibald Ouramdane · Thérapie manuelle des fascias à Marseille"
+  description="Thérapie manuelle des fascias à Marseille : un accompagnement doux contre le stress, les douleurs chroniques et les troubles du sommeil. Réservation en ligne en 1 minute."
+>
+  <Header />
+  <Hero />
+  <TrustStrip />
+  <Empathy />
+  <FasciaExplainer />
+  <PourQui />
+  <Steps />
+  <About />
+  <Reviews />
+  <CtaFinal />
+  <Contact />
+  <Footer />
+  <StickyBar />
+</Layout>
+
+<script>
+  import '../scripts/interactions.ts'
+</script>

@@ -1,0 +1,23 @@
+{
+  "name": "archibald-ouramdane",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Landing page — Archibald Ouramdane, thérapie manuelle des fascias à Marseille",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/react": "^5.0.7",
+    "astro": "^6.4.3",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0"
+  }
+}
