@@ -1,0 +1,11 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "archibald-ouramdane",
+  "compatibility_date": "2025-05-01",
+  // Site 100 % statique : on sert directement le build Astro (dossier dist/)
+  // via Workers Static Assets. Aucun script Worker ni adaptateur nécessaire.
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "404-page"
+  }
+}
